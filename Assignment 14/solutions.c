@@ -5,6 +5,7 @@
 float AreaC(float r);
 float simpleInterest(int p,int r, int t);
 int evenodd(int n);
+int naturalsum(int n);
 
 int main(){
     // float result = AreaC(21);
@@ -12,6 +13,7 @@ int main(){
     // printf("%f",result2);
     // printf("%f ",result);
     int result3 = evenodd(5);
+    int result4 = 
     printf("%d",result3);
 
     return 0;
@@ -40,4 +42,15 @@ int evenodd(int n){
     else{
         return 0;
     }
+}
+
+// funx to print first nth natural number 
+
+int naturalsum(int n){
+    int sum = 0;
+    for(int i = 1;i<=n;i++){
+        sum += i;
+
+    }
+    return sum;
 }
