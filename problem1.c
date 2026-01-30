@@ -1,11 +1,8 @@
 #include<stdio.h>
+
 int main(){
-    int a ,b,c;
-    for(a = 5; a>1;a--){
-        for (b = 6-a;b<=5;b++){
-            c = a + b;
-            printf("\n %d %d %d",a,b,c);
-            
-        }
-    }
+    char arr[10]= {'B','a','n','a','n','a'};
+    for(int i=0; i<10; i++){
+        printf("%c ", arr[i]);
+    }    return 0;
 }
