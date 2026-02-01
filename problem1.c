@@ -1,8 +1,9 @@
 #include<stdio.h>
 
 int main(){
-    char arr[10]= {'B','a','n','a','n','a'};
-    int length = sizeof(arr)/sizeof(arr[0]);
-    printf("%d",length);
-    return 0;
+    int n = 11;
+    for (int i = n;n>0;i--){
+        printf("%d",n%2);
+        n = n/2;
+    }
 }
