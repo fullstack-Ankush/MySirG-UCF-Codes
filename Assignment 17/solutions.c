@@ -4,6 +4,7 @@ int SumN(int a );
 int SumOddN(int n);
 int SumEvenN(int n);
 int SumSqauerN(int n);
+int SumDigits(int n);
 
 
 
@@ -49,6 +50,15 @@ int SumSqauerN(int n){
 
 }
 
+// 5.Write a recursive fnx to sum of digits of given number 
+int SumDigits(int n){
+    if(n/2 == 0){
+        return n;
+    }
+    int S = n%10 + SumDigits(n/10);
+    return S;
+
+}
 
 
 
@@ -63,8 +73,13 @@ int main (){
     // int result3 = SumEvenN(5);
     // printf("%d",result3);
 
-    int result4 = SumSqauerN(5);
-    printf("%d",result4);
+    // int result4 = SumSqauerN(5);
+    // printf("%d",result4);
+
+    int result5 = SumDigits(1234);
+    printf("%d",result5);
+
+
 
 
 
