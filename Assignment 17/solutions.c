@@ -5,6 +5,10 @@ int SumOddN(int n);
 int SumEvenN(int n);
 int SumSqauerN(int n);
 int SumDigits(int n);
+int factorial(int n);
+int HCF(int a, int b);
+
+int Fib(int n);
 
 
 
@@ -61,6 +65,32 @@ int SumDigits(int n){
 }
 
 
+// 6 . Write a Recursive fnx to find factorial of a number 
+
+int factorial(int n){
+    if(n == 1){
+        return 1;
+    }
+    int S = n *factorial(n-1);
+}
+
+// 7 . Write a Recursive fnx to find hcf of two number : 
+
+int HCF(int a, int b){
+
+
+}
+
+// 8 . Write a Recursive fnx to print first N term of a fibonacci series
+
+// Recursive helper: returns the nth Fibonacci number (0-based)
+int Fib(int n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    return Fib(n-1) + Fib(n-2);
+}
+
+
 
 
 int main (){
@@ -76,8 +106,15 @@ int main (){
     // int result4 = SumSqauerN(5);
     // printf("%d",result4);
 
-    int result5 = SumDigits(1234);
-    printf("%d",result5);
+    // int result5 = SumDigits(1234);
+    // printf("%d",result5);
+
+    // int result6 = factorial(5);
+    // printf("%d",result6);
+
+    int result8 = Fib(5);
+    printf("%d",result8);
+
 
 
 
