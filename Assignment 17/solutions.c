@@ -7,7 +7,7 @@ int SumSqauerN(int n);
 int SumDigits(int n);
 int factorial(int n);
 int HCF(int a, int b);
-
+int CountDigit(int n);
 int Fib(int n);
 
 
@@ -90,6 +90,12 @@ int Fib(int n){
     return Fib(n-1) + Fib(n-2);
 }
 
+
+// 9. using recursion find the the no of digits present in input 
+
+int CountDigit(int n){
+
+}
 
 
 
