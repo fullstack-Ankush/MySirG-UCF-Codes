@@ -3,6 +3,9 @@ int GreaterArray(int arr[],int n );
 int SmallerArray(int arr[],int n );
 void SortArray(int arr[], int n);
 void CheckDuplicate(int arr[], int n);
+void SwapelementinArray(int arr[],int n ,int idx);
+
+
 
 // 1. write a fnx to find the greatest number in array of any size 
 int GreaterArray(int arr[],int n ){
@@ -61,6 +64,18 @@ void CheckDuplicate(int arr[], int n){
     }
     printf("\n");
 }
+
+//  6. Swap Element in an array with specific indices
+
+void SwapelementinArray(int arr[],int idx_r,int idx_s){ 
+    int t; 
+    t = arr[idx_s];
+    arr[idx_r] = arr[idx_s];
+    arr[idx_s] = t;
+
+
+}
+
 
 
 
