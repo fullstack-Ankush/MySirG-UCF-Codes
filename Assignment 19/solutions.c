@@ -73,7 +73,7 @@ void SwapelementinArray(int arr[],int idx_r,int idx_s){
     arr[idx_r] = arr[idx_s];
     arr[idx_s] = t;
 
-
+ ~
 }
 
 
