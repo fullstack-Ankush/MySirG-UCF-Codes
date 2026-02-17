@@ -21,6 +21,8 @@ void ToUpperCase(char *str){
     }
 
 }
+
+// 4. 
 int main(){
     char string[10];
     int occurindex[10];
@@ -45,7 +47,7 @@ int main(){
 
 
 
-    
+
     for(int i = 0;string[i];i++){
         printf("%c",string[i]);
     }
