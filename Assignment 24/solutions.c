@@ -62,6 +62,11 @@ void sort(char city[][20],int n){
     }
 }
 
+int countWords(char str[]){
+    int count = 0;
+    
+}
+
 void f3(){
     char city[10][20];
     input(city,10);
