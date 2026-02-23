@@ -82,6 +82,8 @@ void sort(int *ptr,int size){
 }
 
 
+//8. Merge 2 array in an array
+
 int main(){
     char string[10];
     int occurindex[10];
