@@ -1,4 +1,6 @@
 #include<stdio.h>
+// #include<iostream>
+
 // 1. Define a structure Employee
 struct Employee{
     int ID;
@@ -17,11 +19,19 @@ void Input(){
     scanf("%d",&s1.salary);
 }
 
+void HighestSalary(int arr[]){
+    for (int i = 0;i<10;i++){
+         printf("%d",arr[i]);
+            }
+
+}
 //3. A fnx to show data of a employee
 void showData(struct Employee obj){
     printf("%d %s %d",obj.ID,obj.name,obj.salary);
 }
 
+
+//4. 
 int main(){
     Input();
     showData(s1);
