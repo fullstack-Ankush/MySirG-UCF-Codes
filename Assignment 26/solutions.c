@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include<string.h>
+#include<math.h>
+
 
 struct Employee {
     int ID;
@@ -55,6 +58,27 @@ void sortEmployeesByName(struct Employee e[]){
     }
 }
 
+//7. write a program to calculate the difference between two time periods
+struct Time{
+    int hr,min,sec;
+};
+
+struct Time calculateTimeDifference(struct Time t1, struct Time t2){
+    struct Time diff;
+    int totalSec1 = t1.hr * 3600 + t1.min * 60 + t1.sec;
+    int totalSec2 = t2.hr * 3600 + t2.min * 60 + t2.sec;
+    int totalDiff = abs(totalSec1 - totalSec2);
+    
+    diff.hr = totalDiff / 3600;
+    diff.min = (totalDiff % 3600) / 60;
+    diff.sec = totalDiff % 60;
+
+    return diff;    
+}
+
+
+
+
 
 void showData(struct Employee e) {
     printf("ID: %d | Name: %s | Salary: %d\n", e.ID, e.name, e.salary);
@@ -63,18 +87,24 @@ void showData(struct Employee e) {
 int main() {
     struct Employee s[10]; // An array to hold 10 employees
 
-    // Input loop
-    for(int i = 0; i < 10; i++) {
-       Input( &s[i]); 
-    }
+    // // Input loop
+    // for(int i = 0; i < 10; i++) {   
+    //    Input( &s[i]); 
+    // }
 
-    // Display loop
-    printf("\n--- Employee Records ---\n");
-    for(int i = 0; i < 10; i++) {
-        showData(s[i]);
-    }
-    struct Employee highestPaid = showHighestSalary(s);
-    printf("\n--- Highest Salary ---\n");
-    showData(highestPaid);
+    // // Display loop
+    // printf("\n--- Employee Records ---\n");
+    // for(int i = 0; i < 10; i++) {
+    //     showData(s[i]);
+    // }
+    // struct Employee highestPaid = showHighestSalary(s);
+    // printf("\n--- Highest Salary ---\n");
+    // showData(highestPaid);
+    struct Time t1,t2;  
+    struct Time result = calculateTimeDifference((struct Time){2, 30, 45}, (struct Time){1, 15, 30});
+
+
+
+
     return 0;
 }
