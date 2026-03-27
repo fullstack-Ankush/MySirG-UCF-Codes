@@ -73,8 +73,26 @@ void SwapelementinArray(int arr[],int idx_r,int idx_s){
     arr[idx_r] = arr[idx_s];
     arr[idx_s] = t;
 
- ~
+ 
 }
+int count_duplicate(int A[],int size){
+    int i,j,count=0;
+    SortArray(A,size);
+    i=0;
+    j=1;
+    while(i<=size-2){
+        if(A[i]==A[j]){
+            count++;
+            j++;
+        }
+        else{
+            i=j;
+            j++;
+        }
+    }
+
+}
+
 
 
 
