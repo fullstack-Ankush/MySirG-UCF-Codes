@@ -75,6 +75,7 @@ void SwapelementinArray(int arr[],int idx_r,int idx_s){
 
  
 }
+//7. Count the number of duplicates in an array
 int count_duplicate(int A[],int size){
     int i,j,count=0;
     SortArray(A,size);
@@ -90,10 +91,32 @@ int count_duplicate(int A[],int size){
             j++;
         }
     }
+    return count;
 
 }
 
 
+// 8. write a fnx to print all unique element in an array
+void printUniqueElement(int A[],int size){
+    int UnqA[6] = {0};
+    SortArray(A,size);
+    int i = 0;
+    int j = 1;
+    while(i<=size-2){
+        if(A[i]==A[j]){
+            j++;
+            
+        }
+        else{
+            UnqA[i] +=A[i];
+            i=j;
+            j++;
+        }
+    }
+
+    printf(" updated array is : %d \n",UnqA);
+
+}
 
 
 
@@ -105,7 +128,9 @@ int main(){
     // int resutl2 = SmallerArray(arr1,n);
     // printf("%d",resutl2);
     // SortArray(arr1,n);
-    CheckDuplicate(arr1,n);
+    // CheckDuplicate(arr1,n);
+    printUniqueElement(arr1,n);
+
     
         
     
