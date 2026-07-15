@@ -8,13 +8,18 @@ int evenodd(int n);
 int naturalsum(int n);
 int oddnaturalsum(int n);
 int factorial(int n);
+int combinations(int n,int r);
+
+
 
 int main(){
     int result5 = oddnaturalsum(9);
-    int result6 = factorial(5);
-    printf("%d",result6);
+    // int result6 = factorial(4);
+    // printf("%d",result6);
     // printf("%d",result5);
-
+    // printf("%d",result6);
+    int result7= combinations(4,2);
+    printf("%d",result7);
     return 0;
 }
 
@@ -75,5 +80,17 @@ int factorial(int n){
     for(int i = 1;i<=n;i++){
         result *=i;
     }
+    return result;
+}
+
+// fnx to combinations of a number 
+
+int combinations(int n , int r){
+   
+    int a = factorial(n);
+    int b = factorial(n-r);
+    int c = factorial(r);
+
+    int result = a/(b*c);
     return result;
 }
