@@ -7,10 +7,13 @@ float simpleInterest(int p,int r, int t);
 int evenodd(int n);
 int naturalsum(int n);
 int oddnaturalsum(int n);
+int factorial(int n);
 
 int main(){
     int result5 = oddnaturalsum(9);
-    printf("%d",result5);
+    int result6 = factorial(5);
+    printf("%d",result6);
+    // printf("%d",result5);
 
     return 0;
 }
@@ -60,4 +63,17 @@ int oddnaturalsum(int n ){
         sum += i;
     }
     return sum ;
+}
+
+// fnx to find the factorial of a number (TSRS)
+
+int factorial(int n){
+    int result = 1;
+    if (n == 0){
+        return 1;
+    }
+    for(int i = 1;i<=n;i++){
+        result *=i;
+    }
+    return result;
 }
