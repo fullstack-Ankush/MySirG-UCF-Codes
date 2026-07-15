@@ -9,6 +9,8 @@ int naturalsum(int n);
 int oddnaturalsum(int n);
 int factorial(int n);
 int combinations(int n,int r);
+int permutation(int n,int r);
+
 
 
 
@@ -20,6 +22,8 @@ int main(){
     // printf("%d",result6);
     int result7= combinations(4,2);
     printf("%d",result7);
+    int result8=permutation(4,2);
+    printf("%d",result8);
     return 0;
 }
 
@@ -92,5 +96,14 @@ int combinations(int n , int r){
     int c = factorial(r);
 
     int result = a/(b*c);
+    return result;
+}
+int permutation(int n , int r){
+   
+    int a = factorial(n);
+    int b = factorial(n-r);
+    // int c = factorial(r);
+
+    int result = a/b;
     return result;
 }
