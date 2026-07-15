@@ -6,15 +6,11 @@ float AreaC(float r);
 float simpleInterest(int p,int r, int t);
 int evenodd(int n);
 int naturalsum(int n);
+int oddnaturalsum(int n);
 
 int main(){
-    // float result = AreaC(21);
-    // float result2 = simpleInterest(1000,5,2);
-    // printf("%f",result2);
-    // printf("%f ",result);
-    int result3 = evenodd(5);
-    int result4 = 
-    printf("%d",result3);
+    int result5 = oddnaturalsum(9);
+    printf("%d",result5);
 
     return 0;
 }
@@ -53,4 +49,15 @@ int naturalsum(int n){
 
     }
     return sum;
+}
+
+
+// fnx to add odd natural number : 
+
+int oddnaturalsum(int n ){
+    int sum = 0;
+    for(int i = 1;i<=n;i=i+2){
+        sum += i;
+    }
+    return sum ;
 }
