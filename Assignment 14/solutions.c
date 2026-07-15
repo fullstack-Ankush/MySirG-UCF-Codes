@@ -10,7 +10,8 @@ int oddnaturalsum(int n);
 int factorial(int n);
 int combinations(int n,int r);
 int permutation(int n,int r);
-
+int isEvenOrOdd(int n);
+void printPrimeFactors(int n);
 
 
 
@@ -20,10 +21,13 @@ int main(){
     // printf("%d",result6);
     // printf("%d",result5);
     // printf("%d",result6);
-    int result7= combinations(4,2);
-    printf("%d",result7);
-    int result8=permutation(4,2);
-    printf("%d",result8);
+    // int result7= combinations(4,2);
+    // printf("%d",result7);
+    // int result8=permutation(4,2);
+    // printf("%d",result8);
+    // int result9 =isEvenOrOdd(50);
+    // printf("%d",result9);
+    printPrimeFactors(27);
     return 0;
 }
 
@@ -106,4 +110,39 @@ int permutation(int n , int r){
 
     int result = a/b;
     return result;
+}
+
+// a fnx to check whether number is even or odd
+
+int isEvenOrOdd(int n){
+    if(n%2 == 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+// a fnx to calculate the factors of a number (eg. 12 = 2 * 2 * 3);
+
+void printPrimeFactors(int n) {
+    // 1. Handle the smallest prime factor (2)
+    while (n % 2 == 0) {
+        printf("%d ", 2);
+        n = n / 2;
+    }
+
+    // 2. Handle odd prime factors up to the square root of n
+    for (int i = 3; i * i <= n; i = i + 2) {
+        while (n % i == 0) {
+            printf("%d ", i);
+            n = n / i;
+        }
+    }
+
+    // 3. If n is still greater than 2, then n itself is prime
+    if (n > 2) {
+        printf("%d ", n);
+    }
+    printf("\n");
 }
