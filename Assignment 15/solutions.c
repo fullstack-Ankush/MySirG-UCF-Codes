@@ -4,7 +4,7 @@ int HCF(int a, int b);
 int prime(int a);
 int next_prime(int a);
 int Nprime(int a);
-
+void ShowAllPrime(int a, int b);
 
 
 int main(){
@@ -19,8 +19,10 @@ int main(){
     // int result4 = next_prime(11);
     // printf("%d",result4);
 
-    int result5 = Nprime(13);
-    printf("%d",result5);
+    // int result5 = Nprime(13);
+    // printf("%d",result5);
+
+    ShowAllPrime(2,11);
     return 0;
 }
 
@@ -82,5 +84,19 @@ int Nprime(int a){
     for (int i = 2;i<=a;i++){
         printf("\n");
         printf("%d",next_prime(i));
+    }
+}
+
+// 6. fnx to print all prime number between two number 
+
+void ShowAllPrime(int a, int b){
+    for(int i = a;i<=b;i++){
+        if(prime(i) == 0){
+            printf("\n");
+            printf(",%d ",i);
+        }
+        else{
+            printf("not prime nummber possible");
+        }
     }
 }
