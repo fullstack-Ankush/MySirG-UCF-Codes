@@ -91,12 +91,10 @@ int Nprime(int a){
 
 void ShowAllPrime(int a, int b){
     for(int i = a;i<=b;i++){
-        if(prime(i) == 0){
+        if(prime(i) == 1){
             printf("\n");
-            printf(",%d ",i);
+            printf("%d ,",i);
         }
-        else{
-            printf("not prime nummber possible");
-        }
+        
     }
 }
