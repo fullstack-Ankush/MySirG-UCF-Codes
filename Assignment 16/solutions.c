@@ -85,6 +85,28 @@ void print_dec_to_bin(int a){
 
 }
 
+// 9. print decimal to octal 
+void decimalToOctal(int n)
+{
+    if (n == 0)
+        return;
+
+    decimalToOctal(n / 8);
+    printf("%d", n % 8);
+}
+
+// 10.  print reverse of a given number 
+int reverse = 0;
+void reverseNumber(int n)
+{
+    if (n == 0)
+        return;
+
+    reverse = reverse * 10 + (n % 10);
+    reverseNumber(n / 10);
+}
+
+
 int main(){
     // rprintn(5);
     // print_rn(5);
@@ -93,6 +115,7 @@ int main(){
     // print_evenN(8);
     // print_rev_even(5);
     // print_sqaureN(5);
-    print_dec_to_bin(11);
+    // print_dec_to_bin(12);
+    decimalToOctal(199);
 
 }
