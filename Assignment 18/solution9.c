@@ -34,4 +34,5 @@ void reverseSort(int a[], int n){
             }
         }
     }
-}
+} // problems in it 
+
