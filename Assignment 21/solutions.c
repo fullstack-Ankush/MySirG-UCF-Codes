@@ -5,7 +5,7 @@
 
 
 int lengthString(char arr[]);
-int occurenceString(char str[]);
+int occurenceString(char str[],char target);
 int vowelInString(char arr[]);
 void countSpace(char arr[]);
 void toUpperCase(char arr[]);
@@ -17,7 +17,9 @@ void toReverse(char arr[],int n);
 int main(){
     char str[10] ={0};
     gets(str);
-    int n=strlen(str);
+    // int n=strlen(str);
+    int n = occurenceString(str,'a');
+
     printf("%d",n);
 }
 
@@ -33,10 +35,10 @@ int lengthString(char arr[]){
     }
 }
 
-int occurenceString(char arr[]){
+int occurenceString(char arr[],char target){
     int length = 0;
     for(int i = 0;arr[i];i++){
-        if(arr[i] != arr[i+1])
+        if(arr[i] == target)
             length += 1;
     }
     return length;
