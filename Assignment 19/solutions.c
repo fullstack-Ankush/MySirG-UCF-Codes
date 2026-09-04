@@ -118,19 +118,40 @@ void printUniqueElement(int A[],int size){
 
 }
 
+// 9. merge two array with same size and sort it in descending order
+
+int mergewithSort(int a[],int b[], int n){
+    if (sizeof(a)/sizeof(int) == sizeof(b)/sizeof(int)){
+        int c[2*(sizeof(a)/sizeof(int))];
+        for (int i = 0;i<2*n;i++){
+            c[i] += a[i];
+            c[i] += b[i];
+        }
+        SortArray(c,2*n);
+        return c;
+
+    }
+    else{
+        printf("Make sure you enter same size of array\n");
+    }
+}
+
+
 
 
 int main(){
     int arr1[6] = {1,1,3,3,3,6};
+    int arr2[6] = {9,8,7,6,5,4};
     int n = sizeof(arr1)/sizeof(int);
+    int newarr[] = mergewithSort(arr1,arr2,n);
     // int result1 = GreaterArray(arr1,n);
     // printf("%d",result1);
     // int resutl2 = SmallerArray(arr1,n);
     // printf("%d",resutl2);
     // SortArray(arr1,n);
     // CheckDuplicate(arr1,n);
-    printUniqueElement(arr1,n);
-
+    // printUniqueElement(arr1,n);
+    printf("%d",newarr);
     
         
     
