@@ -11,16 +11,21 @@ void countSpace(char arr[]);
 void toUpperCase(char arr[]);
 void toLowerCase(char arr[]);
 void toReverse(char arr[],int n);
-
-
+void countEverything (char arr[]);
 
 int main(){
     char str[10] ={0};
     gets(str);
     // int n=strlen(str);
-    int n = occurenceString(str,'a');
+    // int n = occurenceString(str,'a');
+    // int n = vowelInString(str);
+    str[strlen(str) ] = '\0';
+    countEverything(str);
+    char destination[20];
+    strcpy(destination,str);
 
-    printf("%d",n);
+    printf("%s",destination);
+    // printf("%d",n);
 }
 
 
@@ -32,30 +37,32 @@ int lengthString(char arr[]){
     for(int i = 0;arr[i];i++){
         if (arr[i] == '\0');
             return i;
-    }
+        }
 }
 
 int occurenceString(char arr[],char target){
     int length = 0;
     for(int i = 0;arr[i];i++){
         if(arr[i] == target)
-            length += 1;
+        length += 1;
     }
     return length;
-
+    
 }
 int vowelInString(char arr[]){
     int length = 0;
-    char vowels[10] = {'a','e','i','o','u','A','E','I','O','U'};
-    for(int i = 0;i<lengthString(arr);i++){
-        for(int j = 0;j<vowels[j];j++){
-        if(arr[i] == vowels[j]){
-            length += 1;
-            break;
-        }
+    char vowels[] = {'a','e','i','o','u','A','E','I','O','U'};
+    
+    
+    for(int i = 0;i<strlen(arr);i++){
+        for(int j = 0;j<10;j++){
+            if(arr[i] == vowels[j]){
+                length += 1;
+                break;
+            }
     }
-  }
-    return length;
+}
+return length;
 }
 
 // count the spaces between the string 
@@ -68,7 +75,7 @@ void countSpace(char arr[]){
         }
     }
     printf("%d ",length);
-
+    
 
 }
 
@@ -80,26 +87,26 @@ void toUpperCase(char arr[]){
         else{
             arr[i] -= 32;
         }
-
+        
     }
-
+    
     for(int i = 0;arr[i];i++){
         printf("%c",arr[i]);
     }
-
+    
 }
 
 
 void toLowerCase(char arr[]){
     for(int i = 0;arr[i];i++){
         if(arr[i]>='a' && arr[i]<='z')
-            continue;
+        continue;
         else{
             arr[i] += 32;
         }
-
+        
     }
-
+    
     for(int i = 0;arr[i];i++){
         printf("%c",arr[i]);
     }
@@ -117,3 +124,27 @@ void toReverse(char arr[],int n){
 
 }
 
+
+
+void countEverything(char arr[]){
+    int alpha = 0;
+    int numeric = 0;
+    int special = 0;
+
+    for(int i = 0;arr[i];i++){
+        if (arr[i] > 47 && arr[i]<58){
+            numeric++;
+        }
+        else if (arr[i]>64 && arr[i]< 122){
+            alpha++;
+        }
+        else{
+            special++;
+        }
+        
+
+    }
+    printf("No. of alphabet %d \n",alpha);
+    printf("No. of digits %d \n",numeric);
+    printf("No. of special character %d \n",special);
+}
