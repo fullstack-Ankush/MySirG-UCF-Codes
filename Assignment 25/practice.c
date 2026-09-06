@@ -1,23 +1,26 @@
 #include<stdio.h>
 
-int length(char *p);
-
+void input(int **q,int n,int size[]);
 int main(){
-    int l;
-    char  str[10];
-    fgets(str,10,stdin);
-    l = length(str);
-    printf("%d",l);
+    int a[5],b[6],c[3],d[8];
+    int *p[4];
+    int size[] = {5,6,3,8};
+    p[0] = &a;
+    p[1] = &b;
+    p[2] = &c;
+    p[3] = &d;
+    input(p,4,size);
+
 }
 
-int length(char *p){
-    int x = 0;
-    for(int i = 0;*(p+i);i++){
-        x++;
+void input(int **q,int n,int size[]){
+    for(int i = 0;i<n;i++){
+        for(int j = 0;j<size[i];j++){
+            scanf("%d",*(q+i)+j);
+
+        }
     }
-    return x-1;
 }
-
 
 
 
