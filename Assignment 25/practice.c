@@ -9,6 +9,7 @@ int main(){
     p[1] = &b;
     p[2] = &c;
     p[3] = &d;
+    int x= 12;
     input(p,4,size);
 
 }
