@@ -53,7 +53,7 @@ void sortEmployeesByName(struct Employee e[]){
                 struct Employee temp = e[j];
                 e[j] = e[j + 1];
                 e[j + 1] = temp;
-            }
+            }   
         }
     }
 }
