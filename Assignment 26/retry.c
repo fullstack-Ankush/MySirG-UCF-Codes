@@ -46,3 +46,16 @@ int findHighestSalary(struct employee e[],int n){
     }
     return temp.salary;
 }
+
+// solution 5
+void sortEmployeesBySalary(struct Employee e[]){
+    for(int i = 0; i < 9; i++){
+        for(int j = 0; j < 9 - i; j++){
+            if(e[j].salary > e[j + 1].salary){
+                struct Employee temp = e[j];
+                e[j] = e[j + 1];
+                e[j + 1] = temp;
+            }
+        }
+    }
+}
